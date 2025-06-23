@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Digital Clock</title>
+  </head>
+  <body>
+    <div class="digital-clock">
+      <div class="time">
+        <span class="hour">08</span>
+        <span class="dots">:</span>
+        <span class="minutes">30</span>
+        <div class="right-side">
+          <span class="period">PM</span>
+          <span class="seconds">20</span>
+        </div>
+      </div>
+      <div class="calendar">
+        <span class="month-name">June</span>
+        <span class="day-name">Sunday</span>
+        <span class="day-number">22</span>
+        <span class="year">2025</span>
+      </div>
+      <button class="format-toggle" onclick="toggleTimeFormat()">Switch to 24H</button>
+    </div>
+  </body>
+</html>

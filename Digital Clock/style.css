@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2e2e44;
+}
+
+.digital-clock {
+  position: relative;
+  color: #fff;
+  background: #2d2f41;
+  width: 425px;
+  padding: 20px 45px;
+  box-shadow: 0 5px 25px rgba(14, 21, 37, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.digital-clock:before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(45deg, #24ff6d, #2f93f1, #ff5e9a);
+  background-size: 200% 200%;
+  top: -5px;
+  left: -5px;
+  bottom: -5px;
+  right: -5px;
+  z-index: -1;
+  filter: blur(40px);
+  animation: glowing 10s ease infinite;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 20%;
+  }
+  50% {
+    background-position: 200% 50%;
+  }
+  100% {
+    background-position: 0 20%;
+  }
+}
+
+.time {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hour,
+.dots,
+.minutes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  padding: 0 10px;
+  line-height: 125px;
+}
+
+.hour,
+.minutes {
+  font-size: 6.5rem;
+  width: 125px;
+}
+
+.dots {
+  font-size: 5rem;
+  color: #929292;
+}
+
+.hour {
+  background: linear-gradient(90deg, #634dff, #5fd4ff);
+  color: transparent;
+  background-clip: text;
+}
+
+.minutes {
+  background: linear-gradient(90deg, #ff5e9a, #ffb960);
+  color: transparent;
+  background-clip: text;
+}
+
+.right-side {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.period,
+.seconds {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.period {
+  transform: translateY(-20px);
+  background: linear-gradient(90deg, #f7b63f, #faf879);
+  color: transparent;
+  background-clip: text;
+}
+
+.seconds {
+  transform: translateY(16px);
+  background: linear-gradient(90deg, #24ff6d, #2f93f1);
+  color: transparent;
+  background-clip: text;
+}
+
+.calendar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3em;
+  font-weight: 500;
+  margin-bottom: 5px;
+  background: linear-gradient(90deg, #ae4af6, #ff98d1);
+  color: transparent;
+  background-clip: text;
+}
+
+.day-name,
+.day-number,
+.year {
+  margin-left: 8px;
+}
+
+.format-toggle {
+  margin-top: 20px;
+  padding: 8px 16px;
+  background: linear-gradient(90deg, #634dff, #5fd4ff);
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 15px rgba(99, 77, 255, 0.3);
+}
+
+.format-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(99, 77, 255, 0.4);
+}
+
+.format-toggle:active {
+  transform: translateY(0);
+}
