@@ -1,0 +1,147 @@
+/* Poopins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 370px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 24px;
+  padding: 25px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 36%;
+  width: 100%;
+  background-color: #4070f4;
+  border-radius: 24px 24px 0 0;
+}
+
+.image {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #4070f4;
+  padding: 3px;
+  margin-bottom: 10px;
+}
+
+.image .profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  border: 3px solid #fff;
+  border-radius: 50%;
+}
+
+.text-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+}
+
+.name {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.about {
+  font-size: 15px;
+  font-weight: 400;
+  color: rgb(86, 83, 83);
+}
+
+.card .media-icons {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.media-icons .links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 34px;
+  width: 34px;
+  font-size: 18px;
+  border-radius: 50%;
+  margin: 0 8px;
+  background-color: #4070f4;
+  color: #fff;
+  text-decoration: none;
+}
+
+.card .buttons {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.buttons .btn {
+  background-color: #4070f4;
+  color: #fff;
+  border: none;
+  margin: 0 10px;
+  padding: 8px 24px;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.buttons .btn:hover {
+  background-color: #0e4bf1;
+}
+
+.card .analytics {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.analytics .data {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  color: #333;
+  border-right: 2px solid #e7e7e7;
+}
+
+.data i {
+  font-size: 18px;
+  margin-right: 6px;
+}
+
+.data:last-child {
+  border-right: none;
+}
